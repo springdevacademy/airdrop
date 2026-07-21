@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resource Hub</title>
+</head>
+<body>
+    <h1>Free Developer Resources</h1>
+    <div th:each="item : ${resources}">
+        <h3 th:text="${item.title}">Template Title</h3>
+        <p th:text="${item.description}">Description</p>
+        <a th:href="${item.r2DownloadUrl}">Download Zip</a>
+    </div>
+</body>
+</html>
